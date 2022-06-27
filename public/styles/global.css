@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* font-family: "Major Mono Display", monospace; */
+}
+
+body {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color: rebeccapurple;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title {
+  margin-block: 1rem;
+}

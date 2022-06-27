@@ -1,0 +1,24 @@
+---
+import "../styles/table.css"
+
+const { coins } = Astro.props
+---
+
+<table>
+    <tr>
+        <th>Rank</th>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Market Cap</th>
+    </tr>
+    {coins? coins.map(coin => (
+    <tr>
+        <td>{coin.rank}</td>
+        <td><img src={coin.icon} alt="coin-logo"></td>
+        <td>{coin.name}</td>
+        <td>{coin.price}</td>
+        <td>{coin.marketCap}</td>
+    </tr>
+    )) : <p>No coins available!</p>}
+</table>

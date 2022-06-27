@@ -1,0 +1,36 @@
+---
+
+---
+
+<style>
+    #model {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        background-color: #121212;
+        color: #fff;
+        padding: 1rem 1.2rem;
+    }
+
+    button {
+        background-color: #fff;
+        border: 0;
+        padding: .6rem .8rem;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    document.querySelector("#btnClose").addEventListener("click", () => {
+        document.getElementById("model").style.display = "none"
+    })
+</script>
+
+<div id="model">
+    <p>This site is under development!</p>
+    <button id="btnClose">Ok</button>
+</div>

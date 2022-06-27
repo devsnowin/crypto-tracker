@@ -1,0 +1,27 @@
+---
+import axios from 'axios';
+
+import MainLayout from '../layout/MainLayout.astro';
+import Table from '../components/Table.component.astro';
+import Button from '../components/Button.astro';
+import "../styles/index.css"
+
+async function getCryptoPrice() {
+	const api = await axios.get(`https://api.coinstats.app/public/v1/coins?currency=INR&limit=10`);
+
+	if (api) {
+		const data = api.data.coins
+		return data
+	}
+}
+let coins = await getCryptoPrice()
+
+---
+
+<MainLayout title="Crypto Tracker | Home">
+	<div class="container">
+		<h1 class="title">Welcome to crypto tracker!</h1>
+		<Table coins={coins} />
+		<Button />
+	</div>
+</MainLayout>
